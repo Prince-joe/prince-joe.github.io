@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Happy Birthday!</title> 
+    <link rel="stylesheet" href="nana.css"> 
+    <style>
+        /* Style for the play button */
+        .play-button {
+            background-color: #28a745;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        /* Button hover effect */
+        .play-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head> 
+<body> 
+    <div class="container"> 
+        <div class="header"> 
+            <h1>Happy Birthday, Nkonyenasuah!</h1> 
+        </div> 
+
+        <!-- Play Button to trigger audio -->
+        <button class="play-button" id="playMusicBtn">Play Music</button>
+
+        <!-- Photo Slider -->
+        <div class="photo-slider"> 
+            <div class="slides"> 
+                <!-- Add all your images here (up to 11) --> 
+                <div class="slide active"> 
+                    <img src="photo1.jpg" alt="Memory 1"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo2.jpg" alt="Memory 2"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo3.jpg" alt="Memory 3"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo4.jpg" alt="Memory 4"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo5.jpg" alt="Memory 5"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo6.jpg" alt="Memory 6"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo7.jpg" alt="Memory 7"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo8.jpg" alt="Memory 8"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo9.jpg" alt="Memory 9"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo10.jpg" alt="Memory 10"> 
+                </div> 
+                <div class="slide"> 
+                    <img src="photo11.jpg" alt="Memory 11"> 
+                </div> 
+            </div> 
+            <!-- Navigation Buttons --> 
+            <button class="prev" onclick="prevSlide()">&#10094;</button> 
+            <button class="next" onclick="nextSlide()">&#10095;</button> 
+        </div> 
+
+        <div class="navigation"> 
+            <a href="nana 2.html" class="next-page">Message</a> 
+            <a href="nana 3.html">Final Thoughts</a> 
+        </div> 
+    </div> 
+
+    <!-- Audio Element -->
+    <audio id="birthdayAudio">
+        <source src="dance.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="nana.js"></script> 
+
+    <footer> 
+        Made with ❤️ by Papi. 
+    </footer> 
+
+    <script>
+        // Get the play button and audio elements
+        const playButton = document.getElementById('playMusicBtn');
+        const audio = document.getElementById('birthdayAudio');
+
+        // Play the audio when the play button is clicked
+        playButton.addEventListener('click', function() {
+            audio.play(); // Play the audio file
+
+            // Optionally, hide the button after clicking
+            playButton.style.display = 'none';
+        });
+    </script>
+
+</body> 
+</html>

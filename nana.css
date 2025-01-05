@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    background-color: #007bff; /* Navigation-like background */
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Heading Animation */
+h1 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    animation: glowZoom 3s infinite ease-in-out;
+    color: #fff;
+    text-shadow: 0 0 10px #ff9, 0 0 20px #ff6, 0 0 30px #ff3;
+}
+
+/* Photo Slider */
+.photo-slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    object-position: center;
+}
+
+.active {
+    display: block;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Link Styling */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Glow and Zoom-In/Out Animation */
+@keyframes glowZoom {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px #ff9, 0 0 20px #ff6, 0 0 30px #ff3;
+    }
+    50% {
+        transform: scale(1.1);
+        text-shadow: 0 0 15px #ff9, 0 0 30px #ff6, 0 0 45px #ff3;
+    }
+}
